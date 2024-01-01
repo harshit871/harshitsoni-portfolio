@@ -15,8 +15,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const settings = await client.getSingle("settings");
 
   return {
-    title: settings.data.meta_title,
-    description: settings.data.meta_description,
+    title: settings.data?.meta_title || 'Portfolio',
+    description: settings?.data.meta_description || 'Website Portfolio of a Frontend Developer',
     // openGraph: {
     //   images: [settings.data.og_image?.url || ""],
     // },

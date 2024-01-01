@@ -30,7 +30,7 @@ const routes: prismic.ClientConfig["routes"] = [
   },
   {
     type: "project",
-    path: "/project/:uid",
+    path: "/projects/:uid",
   },
 ];
 
