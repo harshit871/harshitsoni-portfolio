@@ -8,13 +8,6 @@
 				"value": "nest",
 				"type": "Text"
 			},
-			"button_link": {
-				"__TYPE__": "LinkContent",
-				"value": {
-					"__TYPE__": "ExternalLink",
-					"url": "https://slicemachine.dev"
-				}
-			},
 			"button_text": {
 				"__TYPE__": "FieldContent",
 				"value": "everybody",
@@ -53,6 +46,17 @@
 						}
 					}
 				]
+			},
+			"button_link": {
+				"__TYPE__": "LinkContent",
+				"value": {
+					"id": "mock_Media_link",
+					"kind": "image/jpeg",
+					"name": "mock_name",
+					"url": "https://source.unsplash.com/daily",
+					"size": "0",
+					"__TYPE__": "FileLink"
+				}
 			}
 		},
 		"items": []

@@ -477,12 +477,12 @@ export interface BiographySliceDefaultPrimary {
   /**
    * Button Link field in *Biography → Primary*
    *
-   * - **Field Type**: Link
+   * - **Field Type**: Link to Media
    * - **Placeholder**: *None*
    * - **API ID Path**: biography.primary.button_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  button_link: prismic.LinkField;
+  button_link: prismic.LinkToMediaField;
 
   /**
    * Button Text field in *Biography → Primary*
