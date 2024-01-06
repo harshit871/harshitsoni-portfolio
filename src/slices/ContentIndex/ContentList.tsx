@@ -113,26 +113,26 @@ export default function ContentList({
     setCurrentItem(null);
   };
 
-  const contentImages = items.map((item) => {
-    const image = isFilled.image(item.data.image)
-      ? item.data.image
-      : fallbackItemImage;
-    return asImageSrc(image, {
-      fit: "crop",
-      w: 220,
-      h: 320,
-      exp: -10,
-    });
-  });
+  // const contentImages = items.map((item) => {
+  //   const image = isFilled.image(item.data.image)
+  //     ? item.data.image
+  //     : fallbackItemImage;
+  //   return asImageSrc(image, {
+  //     fit: "crop",
+  //     w: 220,
+  //     h: 320,
+  //     exp: -10,
+  //   });
+  // });
 
   // Preload images
-  useEffect(() => {
-    contentImages.forEach((url) => {
-      if (!url) return;
-      const img = new Image();
-      img.src = url;
-    });
-  }, [contentImages]);
+  // useEffect(() => {
+  //   contentImages.forEach((url) => {
+  //     if (!url) return;
+  //     const img = new Image();
+  //     img.src = url;
+  //   });
+  // }, [contentImages]);
 
   return (
     <>
@@ -173,14 +173,14 @@ export default function ContentList({
         ))}
 
         {/* Hover element */}
-        <div
+        {/* <div
           className="hover-reveal pointer-events-none absolute left-0 top-0 -z-10 h-[320px] w-[220px] rounded-lg bg-cover bg-center opacity-0 transition-[background] duration-300"
           style={{
             backgroundImage:
               currentItem !== null ? `url(${contentImages[currentItem]})` : "",
           }}
           ref={revealRef}
-        ></div>
+        ></div> */}
       </ul>
     </>
   );
