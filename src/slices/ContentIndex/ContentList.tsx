@@ -149,6 +149,7 @@ export default function ContentList({
             className="list-item opacity-0"
           >
             <button
+              type="button"
               // href={`${urlPrefix}/${post.uid}`}
               onClick={() => router.push(`https://github.com/harshit871/${post.uid}`)}
               className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row w-full"
