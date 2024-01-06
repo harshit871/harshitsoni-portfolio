@@ -10,6 +10,7 @@ import { FaGithub, FaTwitter, FaLinkedin } from "react-icons/fa6";
 export default async function Footer() {
   const client = createClient();
   const settings = await client.getSingle("settings");
+
   return (
     <Bounded as="footer" className="text-slate-600">
       <div className="container mx-auto mt-20 flex flex-col items-center justify-between gap-6 py-8 sm:flex-row ">
@@ -66,7 +67,7 @@ export default async function Footer() {
               <FaGithub />
             </PrismicNextLink>
           )}
-          {isFilled.link(settings.data.twitter_link) && (
+          {/* {isFilled.link(settings.data.twitter_link) && (
             <PrismicNextLink
               field={settings.data.twitter_link}
               className="p-2 text-2xl text-slate-300 transition-all duration-150 hover:scale-125 hover:text-yellow-400"
@@ -74,7 +75,7 @@ export default async function Footer() {
             >
               <FaTwitter />
             </PrismicNextLink>
-          )}
+          )} */}
           {isFilled.link(settings.data.linkedin_link) && (
             <PrismicNextLink
               field={settings.data.linkedin_link}
