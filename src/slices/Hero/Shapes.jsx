@@ -10,7 +10,7 @@ export function Shapes() {
   return (
     <div className="row-span-1 row-start-1 -mt-9 aspect-square  md:col-span-1 md:col-start-2 md:mt-0">
       <Canvas
-        className="z-0"
+        className="z-0 cursor-pointer"
         shadows
         gl={{ antialias: false }}
         dpr={[1, 1.5]}
@@ -25,7 +25,7 @@ export function Shapes() {
             blur={1}
             far={9}
           />
-          {/* <Environment preset="studio" /> */}
+          <Environment preset="studio" />
         </Suspense>
       </Canvas>
     </div>

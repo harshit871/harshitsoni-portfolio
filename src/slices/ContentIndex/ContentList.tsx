@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MdArrowOutward } from "react-icons/md";
 import { Content } from "@prismicio/client";
+import { useRouter } from "next/navigation";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +23,7 @@ export default function ContentList({
   fallbackItemImage,
   viewMoreText = "Read More",
 }: ContentListProps) {
+  const router = useRouter();
   const component = useRef(null);
   const itemsRef = useRef<Array<HTMLLIElement | null>>([]);
 
@@ -146,9 +148,10 @@ export default function ContentList({
             onMouseEnter={() => onMouseEnter(index)}
             className="list-item opacity-0"
           >
-            <a
-              href={`${urlPrefix}/${post.uid}`}
-              className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row "
+            <button
+              // href={`${urlPrefix}/${post.uid}`}
+              onClick={() => router.push(`https://github.com/harshit871/${post.uid}`)}
+              className="flex flex-col justify-between border-t border-t-slate-100 py-10  text-slate-200 md:flex-row w-full"
               aria-label={post.data.title || ""}
             >
               <div className="flex flex-col">
@@ -164,7 +167,7 @@ export default function ContentList({
               <span className="ml-auto flex items-center gap-2 text-xl font-medium md:ml-0">
                 {viewMoreText} <MdArrowOutward />
               </span>
-            </a>
+            </button>
           </li>
         ))}
 
